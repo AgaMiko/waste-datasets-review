@@ -6,6 +6,10 @@ Today, more than 300 million tons of plastic are produced annually. Plastic is e
 
 The idea of **detect waste project** is to use Artificial Intelligence to detect plastic waste in the environment. Our solution will be applicable for video and photography. Our goal is to use AI for Good.
 
+
+**Visit [majsylw/litter-detection-review](https://github.com/majsylw/litter-detection-review) to see broader review of papers, projects and other resources concering the problem of litter in an environment.**
+
+
 ## Contributing
 
 Feel free to add **issue** with short description of new dataset or create a **pull request** - add the new dataset to the table or fill missing description.
