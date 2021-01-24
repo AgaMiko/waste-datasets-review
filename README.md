@@ -36,6 +36,7 @@ Feel free to add **issue** with short description of new dataset or create a **p
 | spotgarbage                        	| 3              	| -                              	| ~2 400     	| Classification            	| Scraped from Bing search           	| [kaggle](https://www.kaggle.com/apremeyan/garbage)<br> [github](https://github.com/spotgarbage/spotgarbage-GINI)                            	| :heavy_check_mark: 	|
 | DeepSeaWaste                       	| 5              	| -                              	| 3 055      	| Classification            	| Underwater images                    	| [kaggle](https://www.kaggle.com/henryhaefliger/deepseawaste)                  	| :heavy_check_mark: 	|
 | MJU-Waste v1.0                       	| 1              	| -                              	| 2475      	| Segmentation            	| Plain background, indoor RGBD images                    	| [github](https://github.com/realwecan/mju-waste/)                  	| :heavy_check_mark: 	|
+| DC_TrashDataset_v1                      	| 10              	| -                              	| > 9000      	| Classification/Detection            	| Waste inn the wild, paid license                    	|  [github](https://github.com/datacluster-labs/Datacluster-Datasets)                 	| :heavy_check_mark: 	|
 
 # Description
 
@@ -188,3 +189,24 @@ MJU-Waste v1, contains 2475 co-registered RGB and depth image pairs. Images are 
 **Download**: From Google Drive link placed on https://github.com/realwecan/mju-waste/
 
 ![](img/MJU-Wastev1.0_example.jpg)
+
+## DC_TrashDataset_v1
+
+DC_TrashDataset_v1 consists of images of domestic common trash objects. Images were captured and crowdsourced under wide variety of lighting conditions, weather, indoor and outdoor. This dataset can be used for make trash/litter detection models, eco-friendly alternative suggestions, carbon footprint generation etc.
+
+**Dataset Features**
+
+- Various trash object classes
+- Has material labels
+- Captured by 5000+ unique users
+- Highly diverse and HD
+- Various lighting conditions
+- Indoor and Outdoor scenes
+
+**Dataset Format**
+
+- Classification and detection annotations available
+- COCO, PASCAL VOC and YOLO formats
+- Approx. 9000+ unique images and growing
+
+**Download** Images available for download after buying a license. Contact them from their support details at: [https://github.com/datacluster-labs/Datacluster-Datasets](https://github.com/datacluster-labs/Datacluster-Datasets)
