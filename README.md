@@ -35,9 +35,10 @@ Feel free to add **issue** with short description of new dataset or create a **p
 | waste_pictures                     	| 34             	| -                              	| ~24 000    	| Classification            	| Scraped from google search           	| [kaggle](https://www.kaggle.com/wangziang/waste-pictures)                     	| :heavy_check_mark: 	|
 | spotgarbage                        	| 3              	| -                              	| ~2 400     	| Classification            	| Scraped from Bing search           	| [kaggle](https://www.kaggle.com/apremeyan/garbage)<br> [github](https://github.com/spotgarbage/spotgarbage-GINI)                            	| :heavy_check_mark: 	|
 | DeepSeaWaste                       	| 5              	| -                              	| 3 055      	| Classification            	| Underwater images                    	| [kaggle](https://www.kaggle.com/henryhaefliger/deepseawaste)                  	| :heavy_check_mark: 	|
-| MJU-Waste v1.0                       	| 1              	| -                              	| 2475      	| Segmentation            	| Plain background, indoor RGBD images                    	| [github](https://github.com/realwecan/mju-waste/)                  	| :heavy_check_mark: 	|
-| DC_TrashDataset_v1                      	| 10              	| -                              	| > 9000      	| Classification/Detection            	| Waste inn the wild, paid license                    	|  [github](https://github.com/datacluster-labs/Datacluster-Datasets)                 	| :heavy_check_mark: 	|
-| Cigarette butt dataset                     	| 1              	| -                              	| 2200      	| Detection            	| Waste inn the wild, synthetic images                    	|  [website](https://www.immersivelimit.com/datasets/cigarette-butts)                 	| :heavy_check_mark: 	|
+| MJU-Waste v1.0                      | 1              	| -                              	| 2475      	| Segmentation            	  | Plain background, indoor RGBD images                    	| [github](https://github.com/realwecan/mju-waste/)                  	| :heavy_check_mark: 	|
+| DC_TrashDataset_v1                  | 10              | -                              	| > 9000      | Classification/Detection    | Waste inn the wild, paid license                    	|  [github](https://github.com/datacluster-labs/Datacluster-Datasets)                 	| :heavy_check_mark: 	|
+| Cigarette butt dataset              | 1              	| -                              	| 2200      	| Detection            	      | Waste inn the wild, synthetic images                    	|  [website](https://www.immersivelimit.com/datasets/cigarette-butts)                 	| :heavy_check_mark: 	|
+
 
 # Description
 
@@ -225,3 +226,4 @@ You must read and accept the terms of the Non-Commercial, Educational License Ag
 - **Camera:** iPhone 8, original pixel resolution 3024 x 4032
 
 **Download** Images available for download after accepting the terms of the Non-Commercial, Educational License Agreement at: [https://www.immersivelimit.com/datasets/cigarette-butts](https://www.immersivelimit.com/datasets/cigarette-butts)
+
