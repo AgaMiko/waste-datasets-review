@@ -36,7 +36,7 @@ Feel free to add **issue** with short description of new dataset or create a **p
 | spotgarbage                        	| 3              	| -                              	| ~2 400     	| Classification            	| Scraped from Bing search           	| [kaggle](https://www.kaggle.com/apremeyan/garbage)<br> [github](https://github.com/spotgarbage/spotgarbage-GINI)                            	| :heavy_check_mark: 	|
 | DeepSeaWaste                       	| 5              	| -                              	| 3 055      	| Classification            	| Underwater images                    	| [kaggle](https://www.kaggle.com/henryhaefliger/deepseawaste)                  	| :heavy_check_mark: 	|
 | MJU-Waste v1.0                      | 1              	| -                              	| 2475      	| Segmentation            	  | Plain background, indoor RGBD images                    	| [github](https://github.com/realwecan/mju-waste/)                  	| :heavy_check_mark: 	|
-| DC_TrashDataset_v1                  | 10              | -                              	| > 9000      | Classification/Detection    | Waste inn the wild, paid license                    	|  [github](https://github.com/datacluster-labs/Datacluster-Datasets)                 	| :heavy_check_mark: 	|
+| Domestic Trash Dataset                  | 10              | -                              	| > 9000      | Classification/Detection    | Waste inn the wild, paid license, 250 images for free                    	|  [github](https://github.com/datacluster-labs/Datacluster-Datasets)                 	| :heavy_check_mark: 	|
 | Cigarette butt dataset              | 1              	| -                              	| 2200      	| Detection            	      | Waste inn the wild, synthetic images                    	|  [website](https://www.immersivelimit.com/datasets/cigarette-butts)                 	| :heavy_check_mark: 	|
 
 
@@ -192,9 +192,9 @@ MJU-Waste v1, contains 2475 co-registered RGB and depth image pairs. Images are 
 
 ![](img/MJU-Wastev1.0_example.jpg)
 
-## DC_TrashDataset_v1
+## Domestic Trash Dataset
 
-DC_TrashDataset_v1 consists of images of domestic common trash objects. Images were captured and crowdsourced under wide variety of lighting conditions, weather, indoor and outdoor. This dataset can be used for make trash/litter detection models, eco-friendly alternative suggestions, carbon footprint generation etc.
+[Domestic Trash Dataset](https://github.com/datacluster-labs/Domestic-Trash-Dataset) consists of images of domestic common trash objects. Images were captured and crowdsourced under wide variety of lighting conditions, weather, indoor and outdoor. This dataset can be used for make trash/litter detection models, eco-friendly alternative suggestions, carbon footprint generation etc.
 
 **Dataset Features**
 
@@ -210,8 +210,11 @@ DC_TrashDataset_v1 consists of images of domestic common trash objects. Images w
 - Classification and detection annotations available
 - COCO, PASCAL VOC and YOLO formats
 - Approx. 9000+ unique images and growing
+- Only 250 images for free avaiable on [kaggle](https://www.kaggle.com/dataclusterlabs/domestic-trash-garbage-dataset)
 
 **Download** Images available for download after buying a license. Contact them from their support details at: [https://github.com/datacluster-labs/Datacluster-Datasets](https://github.com/datacluster-labs/Datacluster-Datasets)
+
+![](https://github.com/datacluster-labs/Domestic-Trash-Dataset/raw/main/sample_datasets/trash_dataset/paper_cup_4.jpeg) ![](https://github.com/datacluster-labs/Domestic-Trash-Dataset/raw/main/sample_datasets/trash_dataset/battery_2.jpeg) ![](https://github.com/datacluster-labs/Domestic-Trash-Dataset/raw/main/sample_datasets/trash_dataset/paper_cup_3.jpeg)
 
 ## Cigarette butt dataset
 
