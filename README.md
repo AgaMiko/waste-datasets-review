@@ -38,6 +38,7 @@ Feel free to add **issue** with short description of new dataset or create a **p
 | MJU-Waste v1.0                      | 1              	| -                              	| 2475      	| Segmentation            	  | Plain background, indoor RGBD images                    	| [github](https://github.com/realwecan/mju-waste/)                  	| :heavy_check_mark: 	|
 | Domestic Trash Dataset                  | 10              | -                              	| > 9000      | Classification/Detection    | Waste inn the wild, paid license, 250 images for free                    	|  [github](https://github.com/datacluster-labs/Datacluster-Datasets)                 	| :heavy_check_mark: 	|
 | Cigarette butt dataset              | 1              	| -                              	| 2200      	| Detection            	      | Waste inn the wild, synthetic images                    	|  [website](https://www.immersivelimit.com/datasets/cigarette-butts)                 	| :heavy_check_mark: 	|
+| TrashBox | 7 | 25 | 17785 | Classification/Detection | Scraped from web | [github](https://github.com/nikhilvenkatkumsetty/TrashBox) | :heavy_check_mark: |
 
 
 # Description
@@ -71,15 +72,37 @@ Open dataset with 1500 images from 28 categories and 60 detailed sub-categories 
 ![](img/taco_example.jpg)
 
 ## TACO bboxes
-WIP
-**Download**: Directly from website http://tacodataset.org/
+Additional hand-labelled annotations for images from TACO dataset.  There are seven recognized waste categories:
+* bio: food waste such as fruit, vegetables, herbs, used paper towels and
+tissues,
+* glass: glass objects such as glass bottles, jars, cosmetics packaging,
+* metals and plastic: scrap metal and non-ferrous metal, beverage cans,
+plastic beverage bottles, plastic shards, plastic food packaging, or
+plastic straws,
+* non-recyclable: residual rubbish such as disposable diapers, pieces of
+string, polystyrene packaging, polystyrene elements, blankets,
+clothing, or used paper cups,
+* other: construction and demolition, large-size waste (e.g. tires), used
+electronics and household appliances, batteries, paint and varnish
+cans, or expired medicines,
+* paper: paper, cardboard packaging, receipts, newspapers, catalogues,
+and books,
+* unknown waste: (highly decomposed and hard-to-recognize litter),
+* and extra class background label without any litter: a sidewalk, a
+forest path, a lawn
+
+Read more about it in the paper [Deep learning-based waste detection in natural and urban environments,](https://www.sciencedirect.com/science/article/pii/S0956053X21006474?dgcid=coauthor#fn1).
+
+**Download**: Directly from [detect waste repository](https://github.com/wimlds-trojmiasto/detect-waste/tree/main/annotations)
 
 ## UAVVaste
 **Drone rubbish detection intelligent technology**
 The UAVVaste dataset consists to date of 772 images and 3716 annotations. The main motivation for creation of the dataset was the lack of domain-specific data. The datasets that are widely used for object detection evaluation benchmarking. The dataset is made publicly available and is intended to be expanded.
 
-annotations [Detection] Segmentation]- https://github.com/UAVVaste/UAVVaste [drone]
+Avaiable annotations for Detection and Segmentation https://github.com/UAVVaste/UAVVaste
+
 **Download**: Directly from annotations json on github https://github.com/UAVVaste/UAVVaste
+
 ![](img/uavvaste_example.gif)
 
 ## Trashnet
@@ -230,3 +253,20 @@ You must read and accept the terms of the Non-Commercial, Educational License Ag
 
 **Download** Images available for download after accepting the terms of the Non-Commercial, Educational License Agreement at: [https://www.immersivelimit.com/datasets/cigarette-butts](https://www.immersivelimit.com/datasets/cigarette-butts)
 
+
+## TrashBox dataset
+
+Dataset of trash objects for waste classification and detection (no detection annotations provided in repository). Contains 17785 waste object images scraped from web. 
+
+Waste categories are as follows:
+1. Medical waste : Syringes, Surgical Gloves, Surgical Masks, Medicines( Drugs and Pills)   [Number of images: 2010]
+2. E-Waste : Electronic chips, Laptops and Smartphones, Applicances, Electric wires, cords and cables   [Number of images: 2883]
+3. Plastic : Bags, Bottles, Containers, Cups, Cigarette Butts (which have a plastic filter)  [Number of images: 2669]
+4. Paper : Tetra Pak, News Papers, Paper Cups, Paper Tissues  [Number of images: 2695]
+5. Metal : Beverage Cans, Cnostruction Scrap, Spray Cans, Food Grade Cans, Other metal objects. [Number of images: 2586]
+6. Glass [Number of images: 2528]
+7. Cardboard [Number of images: 2414]
+
+**Download** Images are available for download at github repository: [nikhilvenkatkumsetty/TrashBox](https://github.com/nikhilvenkatkumsetty/TrashBox)
+
+<img src="https://github.com/nikhilvenkatkumsetty/TrashBox/blob/main/Trash_dataset/e-waste/e-waste%201.jpg" width="300"> <img src="https://github.com/nikhilvenkatkumsetty/TrashBox/blob/main/Trash_dataset/plastic/plastic%201001.jpg" width="300"> <img src="https://github.com/nikhilvenkatkumsetty/TrashBox/blob/main/Trash_dataset/medical/medical%201005.jpg" width="300">
