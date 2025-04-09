@@ -41,7 +41,9 @@ Feel free to add **issue** with short description of new dataset or create a **p
 | TrashBox | 7 | 25 | 17785 | Classification/Detection | Scraped from web | [github](https://github.com/nikhilvenkatkumsetty/TrashBox) | ? | :heavy_check_mark: |
 | PortlandStateSingh | 5 | - | 11500 | Classification/Detection | Original photos | [website](https://web.cecs.pdx.edu/~singh/rcyc-web/index.html) | ? | |
 | TIDY | 9 | - | 304 | Classification | Original photos | [github](https://github.com/gale31/TIDY) | MIT license | |
-
+| **Garbage Dataset (V2)** | **10** | **-** | **19 762** | **Classification** | **Household waste. Used in paper "Managing Household Waste Through Transfer Learning"** | **[kaggle](https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2)** | **?** | **:heavy_check_mark:** |
+| **RealWaste** | **9** | **-** | **4 752** | **Classification** | **Collected in authentic landfill environment. 524x524 resolution.** | **[UCI ML Repo](https://archive.ics.uci.edu/dataset/908/realwaste)** | **?** | **:heavy_check_mark:** |
+| **BePLi Dataset v1** | **1** | **-** | **3 709** | **Instance Segmentation / Object Detection** | **Beach plastic litter (various types) in coastal environments (Japan). MS COCO format.** | **[ResearchGate Paper](https://www.researchgate.net/publication/370218660_BePLi_Dataset_v1_Beach_Plastic_Litter_Dataset_version_1_for_instance_segmentation_of_beach_plastic_litter)** | **CC BY 4.0** | **:heavy_check_mark:** |
 
 # Description
 
@@ -272,3 +274,21 @@ Waste categories are as follows:
 **Download** Images are available for download at github repository: [nikhilvenkatkumsetty/TrashBox](https://github.com/nikhilvenkatkumsetty/TrashBox)
 
 <img src="https://github.com/nikhilvenkatkumsetty/TrashBox/blob/main/Trash_dataset/e-waste/e-waste%201.jpg" width="300"> <img src="https://github.com/nikhilvenkatkumsetty/TrashBox/blob/main/Trash_dataset/plastic/plastic%201001.jpg" width="300"> <img src="https://github.com/nikhilvenkatkumsetty/TrashBox/blob/main/Trash_dataset/medical/medical%201005.jpg" width="300">
+
+## Garbage Dataset (V2)
+
+This dataset contains 19,762 images of garbage items categorized into 10 classes: Metal, Glass, Biological, Paper, Battery, Trash, Cardboard, Shoes, Clothes, and Plastic. It is designed for machine learning projects focusing on recycling and waste management, suitable for classification or object detection models. The dataset was featured in the research paper "Managing Household Waste Through Transfer Learning".
+
+**Download**: Directly from Kaggle [https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2](https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2)
+
+## RealWaste
+
+RealWaste is an image classification dataset featuring 4752 color images (524x524 resolution) of waste items across 9 major material types: Cardboard, Food Organics, Glass, Metal, Miscellaneous Trash, Paper, Plastic, Textile Trash, and Vegetation. The images were collected within an authentic landfill environment as part of research comparing CNN performance on real versus pure waste items. Higher resolution images may be available from the authors.
+
+**Download**: Dataset information and potential download available via UCI Machine Learning Repository [https://archive.ics.uci.edu/dataset/908/realwaste](https://archive.ics.uci.edu/dataset/908/realwaste)
+
+## BePLi Dataset v1
+
+The Beach Plastic Litter Dataset version 1 (BePLi Dataset v1) includes 3709 images taken in various coastal environments in Yamagata Prefecture, Japan (e.g., sand beaches, rocky beaches, tetrapods). It provides instance-based and pixel-level annotations (in a modified MS COCO format) for a single class, "plastic litter," which encompasses items like PET bottles, containers, fishing gear, and styrene foams. The dataset aims to support the development of models for identifying and analyzing beach plastic litter.
+
+**Download**: The dataset link is referenced in the associated Data in Brief article available via ResearchGate [https://www.researchgate.net/publication/370218660_BePLi_Dataset_v1_Beach_Plastic_Litter_Dataset_version_1_for_instance_segmentation_of_beach_plastic_litter](https://www.researchgate.net/publication/370218660_BePLi_Dataset_v1_Beach_Plastic_Litter_Dataset_version_1_for_instance_segmentation_of_beach_plastic_litter) (License: CC BY 4.0)
