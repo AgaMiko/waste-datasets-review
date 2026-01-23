@@ -36,14 +36,24 @@ Feel free to add **issue** with short description of new dataset or create a **p
 | spotgarbage                        	| 3              	| -                              	| ~2 400     	| Classification            	| Scraped from Bing search           	| [kaggle](https://www.kaggle.com/apremeyan/garbage)<br> [github](https://github.com/spotgarbage/spotgarbage-GINI)                            	| CC0: Public Domain | :heavy_check_mark: 	|
 | DeepSeaWaste                       	| 5              	| -                              	| 3 055      	| Classification            	| Underwater images                    	| [kaggle](https://www.kaggle.com/henryhaefliger/deepseawaste)                  	| Unknown | :heavy_check_mark: 	|
 | MJU-Waste v1.0                      | 1              	| -                              	| 2475      	| Segmentation            	  | Plain background, indoor RGBD images                    	| [github](https://github.com/realwecan/mju-waste/)                  	| MIT license | :heavy_check_mark: 	|
-| Domestic Trash Dataset                  | 10              | -                              	| > 9000      | Classification/Detection    | Waste inn the wild, paid license, 250 images for free                    	|  [github](https://github.com/datacluster-labs/Datacluster-Datasets)                 	| ? | :heavy_check_mark: 	|
-| Cigarette butt dataset              | 1              	| -                              	| 2200      	| Detection            	      | Waste inn the wild, synthetic images                    	|  [website](https://www.immersivelimit.com/datasets/cigarette-butts)                 	| Non-Commercial, Educational License Agreement | :heavy_check_mark: 	|
+| Domestic Trash Dataset                  | 10              | -                              	| > 9000      | Classification/Detection    | Waste in the wild, paid license, 250 images for free                    	|  [github](https://github.com/datacluster-labs/Datacluster-Datasets)                 	| ? | :heavy_check_mark: 	|
+| Cigarette butt dataset              | 1              	| -                              	| 2200      	| Detection            	      | Waste in the wild, synthetic images                    	|  [website](https://www.immersivelimit.com/datasets/cigarette-butts)                 	| Non-Commercial, Educational License Agreement | :heavy_check_mark: 	|
 | TrashBox | 7 | 25 | 17785 | Classification/Detection | Scraped from web | [github](https://github.com/nikhilvenkatkumsetty/TrashBox) | ? | :heavy_check_mark: |
 | PortlandStateSingh | 5 | - | 11500 | Classification/Detection | Original photos | [website](https://web.cecs.pdx.edu/~singh/rcyc-web/index.html) | ? | |
 | TIDY | 9 | - | 304 | Classification | Original photos | [github](https://github.com/gale31/TIDY) | MIT license | |
 | **Garbage Dataset (V2)** | **10** | **-** | **19 762** | **Classification** | **Household waste. Used in paper "Managing Household Waste Through Transfer Learning"** | **[kaggle](https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2)** | **?** | **:heavy_check_mark:** |
 | **RealWaste** | **9** | **-** | **4 752** | **Classification** | **Collected in authentic landfill environment. 524x524 resolution.** | **[UCI ML Repo](https://archive.ics.uci.edu/dataset/908/realwaste)** | **?** | **:heavy_check_mark:** |
 | **BePLi Dataset v1** | **1** | **-** | **3 709** | **Instance Segmentation / Object Detection** | **Beach plastic litter (various types) in coastal environments (Japan). MS COCO format.** | **[ResearchGate Paper](https://www.researchgate.net/publication/370218660_BePLi_Dataset_v1_Beach_Plastic_Litter_Dataset_version_1_for_instance_segmentation_of_beach_plastic_litter)** | **CC BY 4.0** | **:heavy_check_mark:** |
+| ZeroWaste | 4 | - | 4 503 (+ 6 212 unlabeled, + 1 410 weakly) | Instance-Segmentation / Detection | Recycling plant conveyor belts | [github](https://github.com/Trash-AI/ZeroWaste) | CC BY-NC 4.0 (dataset) | :heavy_check_mark: |
+| BeachLitter dataset v2022 | 8 | - | 3 500 | Segmentation | Beach litter (8 classes) | [doi](https://doi.org/10.17882/85472) | CC BY 4.0 | :heavy_check_mark: |
+| **BePLi Dataset v2** | **13** | **-** | **3 722** | **Instance Segmentation / Object Detection** | **Beach plastic litter (Japan). Update of BePLi.** | **[doi](https://doi.org/10.17882/96963)** | **CC BY-NC-SA 4.0** | **:heavy_check_mark:** |
+| MARIDA | 15 | confidence level (3) | 1 381 patches | Weakly-supervised semantic segmentation | Sentinel-2 remote sensing (marine debris) | [zenodo](https://zenodo.org/records/5151941) | CC BY 4.0 | :heavy_check_mark: |
+| MADOS | 15 | confidence level (3) | 2 803 patch crops | Semantic segmentation (sparse) | Sentinel-2 remote sensing (marine debris + oil spill) | [zenodo](https://zenodo.org/records/10664073) | Open (see Zenodo) | :heavy_check_mark: |
+| DroneWaste | 20 | - | 4 993 | Detection | Drone orthomosaics (illegal dumpsites) | [zenodo](https://zenodo.org/records/17288038) | CC BY 4.0 | :heavy_check_mark: |
+| SpectralWaste | 6 | - | 852 | Instance Segmentation / Classification | Waste sorting; RGB + SWIR hyperspectral | [zenodo](https://zenodo.org/records/11499414) | CC BY 4.0 | :heavy_check_mark: |
+| SWIR hyperspectral waste cubes | - | - | 7 cubes | - | SWIR hyperspectral (980–2500 nm) waste objects | [mendeley](https://data.mendeley.com/datasets/dpnrxcc8fv/2) | CC BY 4.0 | :heavy_check_mark: |
+| IWHR_AI_Lable_Floater_V1 | ? | - | 3 000 | Detection | Floating debris in inland waters (shore-based) | [paper](https://doi.org/10.1038/s41597-025-04594-9)<br>[figshare](https://doi.org/10.6084/m9.figshare.27376851.v1) | ? | :heavy_check_mark: |
+| FloW (FloW-Img / FloW-RI) | ? | - | 2 000 images (+ 4 000 frames w/ radar) | Detection + radar | Floating waste in inland waters (application needed) | [github](https://github.com/ORCA-Uboat/FloW-Dataset) | Application required | :heavy_check_mark: |
 
 # Description
 
@@ -292,3 +302,107 @@ RealWaste is an image classification dataset featuring 4752 color images (524x52
 The Beach Plastic Litter Dataset version 1 (BePLi Dataset v1) includes 3709 images taken in various coastal environments in Yamagata Prefecture, Japan (e.g., sand beaches, rocky beaches, tetrapods). It provides instance-based and pixel-level annotations (in a modified MS COCO format) for a single class, "plastic litter," which encompasses items like PET bottles, containers, fishing gear, and styrene foams. The dataset aims to support the development of models for identifying and analyzing beach plastic litter.
 
 **Download**: The dataset link is referenced in the associated Data in Brief article available via ResearchGate [https://www.researchgate.net/publication/370218660_BePLi_Dataset_v1_Beach_Plastic_Litter_Dataset_version_1_for_instance_segmentation_of_beach_plastic_litter](https://www.researchgate.net/publication/370218660_BePLi_Dataset_v1_Beach_Plastic_Litter_Dataset_version_1_for_instance_segmentation_of_beach_plastic_litter) (License: CC BY 4.0)
+
+## ZeroWaste
+
+ZeroWaste is a dataset for automated waste detection and segmentation in recycling plants (conveyor belt imagery). The dataset focuses on 4 material types:
+- soft plastic
+- rigid plastic
+- cardboard
+- metal
+
+It includes:
+- **ZeroWaste-f**: 4,503 fully annotated images
+- **ZeroWaste-s**: 6,212 unlabeled images (for semi-supervised learning)
+- **ZeroWaste-w**: 1,410 weakly labeled “before/after cleaning” images
+
+**Download**: GitHub repository (dataset section) https://github.com/Trash-AI/ZeroWaste  
+**License**: CC BY-NC 4.0 (dataset); code is released separately (see repo)
+
+## BeachLitter dataset v2022
+
+BeachLitter dataset v2022 is an image segmentation dataset for beach litter. It contains **3,500** images with pixel-wise masks for **8 classes**:
+- bottle
+- can
+- carton
+- cup
+- other plastic
+- other plastic containers
+- plastic bag
+- wrapper
+
+**Download**: SEANOE (DOI) https://doi.org/10.17882/85472  
+**License**: CC BY 4.0
+
+## BePLi Dataset v2
+
+BePLi Dataset v2 is an updated beach plastic litter dataset (Japan) providing images and annotations for **13 object classes**.  
+It contains **3,722** images and **118,572** annotations.
+
+**Download**: SEANOE (DOI) https://doi.org/10.17882/96963  
+**License**: CC BY-NC-SA 4.0
+
+## MARIDA (Marine Debris Archive)
+
+MARIDA (MARIne Debris Archive) is a Sentinel-2 remote sensing dataset focused on marine debris, designed primarily for weakly supervised pixel-level semantic segmentation.  
+It contains **1,381** patches (256×256), with corresponding class masks and confidence-level masks, plus train/val/test splits.
+
+**Download**: Zenodo https://zenodo.org/records/5151941  
+**License**: CC BY 4.0
+
+## MADOS (Marine Debris and Oil Spill)
+
+MADOS is a Sentinel-2 marine pollution dataset focusing on **marine debris** and **oil spills**, alongside other sea surface features that may be spectrally similar.  
+It is structured in **174 scenes** and contains **2,803** patch crops (240×240). It provides sparse pixel-level labels, confidence levels, report layers, and train/val/test splits.
+
+Classes include (among others): Marine Debris, Dense Sargassum, Sparse Floating Algae, Natural Organic Material, Ship, Oil Spill, Oil Platform, Jellyfish, Sea snot, etc.
+
+**Download**: Zenodo https://zenodo.org/records/10664073  
+**License**: See Zenodo record
+
+## DroneWaste
+
+DroneWaste is a dataset for recognizing waste materials in aerial imagery. It contains **4,993** images extracted from drone-derived orthomosaics of **17** solid waste dumps, with **20** different material types.
+
+**Download**: Zenodo https://zenodo.org/records/17288038  
+**License**: CC BY 4.0
+
+## SpectralWaste
+
+SpectralWaste is a multimodal dataset for waste sorting automation. It provides:
+- **852 RGB images**
+- **2,059** annotated instances across **6** classes
+- synchronized SWIR hyperspectral data cubes
+
+The dataset supports tasks such as waste classification and (instance) segmentation/detection.
+
+**Download**: Zenodo https://zenodo.org/records/11499414  
+**License**: CC BY 4.0
+
+## SWIR hyperspectral waste cubes
+
+This dataset provides **7** SWIR hyperspectral data cubes of waste objects for automated sorting:
+- 288 wavelengths from 980 to 2500 nm
+
+**Download**: Mendeley Data https://data.mendeley.com/datasets/dpnrxcc8fv/2  
+**License**: CC BY 4.0
+
+## IWHR_AI_Lable_Floater_V1
+
+IWHR_AI_Lable_Floater_V1 is a dataset for floating debris detection in inland waters (shore-based filming equipment, surveillance cameras, and mobile devices).  
+It contains:
+- **3,000** annotated images
+- **23,692** annotated objects (bounding boxes)
+
+Data is distributed as JPG images with XML annotation files.
+
+**Download**: Figshare (DOI) https://doi.org/10.6084/m9.figshare.27376851.v1  
+Related paper: https://doi.org/10.1038/s41597-025-04594-9
+
+## FloW (FloW-Img / FloW-RI)
+
+FloW is a dataset for floating waste detection in inland waters:
+- **FloW-Img**: vision-based dataset (reported as 2,000 images / 5,271 annotated objects in related literature)
+- **FloW-RI**: multimodal dataset with synchronized images and millimeter-wave radar (RDM) data (reported as 4,000 frames)
+
+**Download**: Requires application via ORCA-Uboat dataset portal (see repo) https://github.com/ORCA-Uboat/FloW-Dataset
