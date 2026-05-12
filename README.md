@@ -1,4 +1,4 @@
-[# Waste datasets review
+# Waste datasets review
 
 List of datasets with any kind of litter, garbage, waste and trash. Created during the [detectwaste.ml](https://detectwaste.ml/) project
 
@@ -406,4 +406,3 @@ FloW is a dataset for floating waste detection in inland waters:
 - **FloW-RI**: multimodal dataset with synchronized images and millimeter-wave radar (RDM) data (reported as 4,000 frames)
 
 **Download**: Requires application via ORCA-Uboat dataset portal (see repo) https://github.com/ORCA-Uboat/FloW-Dataset
-](https://github.com/AgaMiko/pixel_character_generator)
