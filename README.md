@@ -1,14 +1,37 @@
 # Waste datasets review
 
-List of datasets with any kind of litter, garbage, waste and trash. Created during the [detectwaste.ml](https://detectwaste.ml/) project
+List of datasets with any kind of litter, garbage, waste and trash. Created during the [Detect Waste](https://github.com/wimlds-trojmiasto/detect-waste) project
 
 Today, more than 300 million tons of plastic are produced annually. Plastic is everywhere and we constantly use it in our daily life.
 
 The idea of **detect waste project** is to use Artificial Intelligence to detect plastic waste in the environment. Our solution will be applicable for video and photography. Our goal is to use AI for Good.
 
 
-**Visit [majsylw/litter-detection-review](https://github.com/majsylw/litter-detection-review) to see broader review of papers, projects and other resources concering the problem of litter in an environment.**
+**Visit [majsylw/litter-detection-review](https://github.com/majsylw/litter-detection-review) to see broader review of papers, projects and other resources concerning the problem of litter in an environment.**
 
+
+> **November 2026 update:** 16 new datasets (rivers, underwater, drone, recycling plants, e-waste and medical waste), broken and moved links fixed, an annotation types figure, and a table of datasets by setting.
+
+## Choosing a dataset
+
+The datasets differ in where the images were taken and how they are labeled. Classification datasets only say what is in an image; detection and segmentation datasets also say where each object is.
+
+![Annotation types](img/annotation-types.svg)
+
+This table groups the datasets by where the images were taken and by the most detailed annotation each one has. SWIR hyperspectral waste cubes are not included (no labels).
+
+| Setting | Classification | Detection | Segmentation |
+|---|---|---|---|
+| **Plain background (single objects)** | [Trashnet](#trashnet), [WaDaBa](#plastic-waste-database-of-images--wadaba), [GLASSENSE-VISION](#glassense-vision), Sushi Restaurant, TIDY, [Garbage Dataset V2](#garbage-dataset-v2), [Medical-Waste-4.0](#medical-waste-40), [ETID-v2](#etid-v2-e-tadweer-image-dataset) | [Drinking Waste](#drinking-waste-classification), PortlandStateSingh | [MJU-Waste](#mju-waste-v10) |
+| **Web images (scraped)** | [Waste Classification data](#waste-classification-data), [Waste Classification v2](#waste-classification-data-v2), [waste_pictures](#waste_pictures), [spotgarbage](#spotgarbage---gini-dataset) | [TrashBox](#trashbox-dataset) | – |
+| **Streets and outdoors** | [Open Litter Map](#open-litter-map) | [TACO bboxes](#taco-bboxes), [Litter](#litter), [Domestic Trash](#domestic-trash-dataset), [Cigarette butts](#cigarette-butt-dataset), [PlastOPol](#plastopol), [pLitterStreet](#plitterstreet), [RoLID-11K](#rolid-11k), [SWiM3](#swim3) | [TACO](#taco) |
+| **Beaches** | – | – | [BePLi v1](#bepli-dataset-v1), [BePLi v2](#bepli-dataset-v2), [BeachLitter](#beachlitter-dataset-v2022) |
+| **Underwater (camera and sonar)** | [DeepSeaWaste](#deepseawaste) | [Trash-ICRA19](#trash-icra19), [DeepPlastic](#deepplastic) | [TrashCan 1.0](#trashcan-10), [Seaclear](#seaclear-marine-debris), [Marine Debris FLS](#marine-debris-fls) |
+| **Rivers and lakes (floating litter)** | [TUD-GV](#tud-gv) | [IWHR Floater](#iwhr_ai_lable_floater_v1), [FloW](#flow-flow-img--flow-ri), [FloatWaste](#floatwaste) | [RiSID](#risid-river-surface-image-dataset), [AquaPlasticWaste](#aquaplasticwaste-2026) |
+| **Drone and satellite** | [AerialWaste](#aerialwaste) | [DroneWaste](#dronewaste) | [UAVVaste](#uavvaste), [MARIDA](#marida-marine-debris-archive), [MADOS](#mados-marine-debris-and-oil-spill) |
+| **Recycling plants and landfills** | [RealWaste](#realwaste) | [WaRP](#warp-waste-recycling-plant) | [ZeroWaste](#zerowaste), [SpectralWaste](#spectralwaste), [CODD](#codd-construction-and-demolition-waste-object-detection-dataset) |
+
+The [summary table](#summary) lists every dataset with its size, annotation type and license. Click a name to jump to its description.
 
 ## Contributing
 
@@ -18,42 +41,58 @@ Feel free to add **issue** with short description of new dataset or create a **p
 
 | Name                               	| No. categories 	| No. subcategories              	| No. images 	| Annotation                	| Comment                              	| Website                                                             	| License | Description        	|
 |------------------------------------	|----------------	|--------------------------------	|------------	|---------------------------	|--------------------------------------	|---------------------------------------------------------------------	|-------- | --------------------	|
-| TrashCan 1.0                       	| 3              	| 34                             	| 7 212      	| Instance-Segmentation     	| Underwater images                    	| [website](https://conservancy.umn.edu/handle/11299/214865)                     	| Free for academic teaching/research use, must obtain JAMSTEC permission for commercial use.  | :heavy_check_mark: 	|
-| Trash-ICRA19                       	| 3              	| 34                             	| 5 700      	| Detection                 	| Underwater images                    	| [website](https://conservancy.umn.edu/handle/11299/214366)                     	| Free for academic teaching/research use, must obtain JAMSTEC permission for commercial use.  | :heavy_check_mark: 	|
-| TACO                               	| 28             	| 60                             	| 1 500      	| Segmentation              	| Waste in the wild                    	| [website](http://tacodataset.org/stats)                                        	| MIT license | :heavy_check_mark: 	|
-| TACO bboxes                        	| 7              	| 60                             	| WIP        	| Detection                 	| Waste in the wild                    	| WIP                                                                 	| ? | :heavy_check_mark: 	|
-| UAVVaste                           	| 1              	| -                              	| 772        	| Segmentation              	| Drone dataset                        	| [github](https://github.com/UAVVaste/UAVVaste)                                	| Apache license | :heavy_check_mark: 	|
-| Trashnet                           	| 6              	| -                              	| 2 527      	| Classification            	| Clear background                     	| [github](https://github.com/garythung/trashnet)                               	| MIT license | :heavy_check_mark: 	|
-| WaDaBa                             	| 8              	| color,size, shape, or material 	| 4 000      	| Classification            	| Plastic dataset, clear background    	| [website](http://wadaba.pcz.pl/)                                               	| ? | :heavy_check_mark: 	|
-| GLASSENSE-VISION                   	| 7              	| 136                            	| 2 000      	| Classification            	| Home-supplies, clear background      	| [website](http://www.slipguru.unige.it/Data/glassense_vision/)                 	| ? | :heavy_check_mark: 	|
-| Waste Classification data          	| 2              	| -                              	| ~25 000    	| Classification            	| Scraped from google search           	| [kaggle](https://www.kaggle.com/techsash/waste-classification-data)           	| CC BY-SA 4.0 | :heavy_check_mark: 	|
-| Waste Classification Data v2       	| 3              	| -                              	| ~27 500    	| Classification            	| Scraped from google search           	| [kaggle](https://www.kaggle.com/sapal6/waste-classification-data-v2)          	| CC BY-SA 4.0 | :heavy_check_mark: 	|
-| Waste Images from Sushi Restaurant 	| 16             	| -                              	| 500        	| Classification            	| Clear background                     	| [kaggle](https://www.kaggle.com/arthurcen/waste-images-from-sushi-restaurant) 	| Database: Open Database, Contents: © Original Authors | :heavy_check_mark: 	|
-| Open litter map                    	| 11             	| 187                            	| > 100k     	| Multilabel classification 	| Waste in the wild                    	| [website](https://openlittermap.com/)                                          	| ? | :heavy_check_mark: 	|
-| Litter                             	| 24             	| size, shape, or material       	| ~14 000    	| Detection                 	| Waste in the wild, paid license      	| [website](https://www.imageannotation.ai/litter-dataset)                       	| ? | :heavy_check_mark: 	|
-| Drinking Waste Classification      	| 4              	| -                              	| 9640       	| Detection                 	| Clear background, (cans and bottles) 	| [kaggle](https://www.kaggle.com/arkadiyhacks/drinking-waste-classification)   	| CC0: Public Domain | :heavy_check_mark: 	|
-| waste_pictures                     	| 34             	| -                              	| ~24 000    	| Classification            	| Scraped from google search           	| [kaggle](https://www.kaggle.com/wangziang/waste-pictures)                     	| Unknown | :heavy_check_mark: 	|
-| spotgarbage                        	| 3              	| -                              	| ~2 400     	| Classification            	| Scraped from Bing search           	| [kaggle](https://www.kaggle.com/apremeyan/garbage)<br> [github](https://github.com/spotgarbage/spotgarbage-GINI)                            	| CC0: Public Domain | :heavy_check_mark: 	|
-| DeepSeaWaste                       	| 5              	| -                              	| 3 055      	| Classification            	| Underwater images                    	| [kaggle](https://www.kaggle.com/henryhaefliger/deepseawaste)                  	| Unknown | :heavy_check_mark: 	|
-| MJU-Waste v1.0                      | 1              	| -                              	| 2475      	| Segmentation            	  | Plain background, indoor RGBD images                    	| [github](https://github.com/realwecan/mju-waste/)                  	| MIT license | :heavy_check_mark: 	|
-| Domestic Trash Dataset                  | 10              | -                              	| > 9000      | Classification/Detection    | Waste in the wild, paid license, 250 images for free                    	|  [github](https://github.com/datacluster-labs/Datacluster-Datasets)                 	| ? | :heavy_check_mark: 	|
-| Cigarette butt dataset              | 1              	| -                              	| 2200      	| Detection            	      | Waste in the wild, synthetic images                    	|  [website](https://www.immersivelimit.com/datasets/cigarette-butts)                 	| Non-Commercial, Educational License Agreement | :heavy_check_mark: 	|
-| TrashBox | 7 | 25 | 17785 | Classification/Detection | Scraped from web | [github](https://github.com/nikhilvenkatkumsetty/TrashBox) | ? | :heavy_check_mark: |
+| [TrashCan 1.0](#trashcan-10) | 3              	| 34                             	| 7 212      	| Instance-Segmentation     	| Underwater images                    	| [website](https://conservancy.umn.edu/handle/11299/214865)                     	| Free for academic teaching/research use, must obtain JAMSTEC permission for commercial use.  | :heavy_check_mark: 	|
+| [Trash-ICRA19](#trash-icra19) | 3              	| 34                             	| 5 700      	| Detection                 	| Underwater images                    	| [website](https://conservancy.umn.edu/handle/11299/214366)                     	| Free for academic teaching/research use, must obtain JAMSTEC permission for commercial use.  | :heavy_check_mark: 	|
+| [TACO](#taco) | 28             	| 60                             	| 1 500      	| Segmentation              	| Waste in the wild                    	| [website](http://tacodataset.org/stats)                                        	| MIT license | :heavy_check_mark: 	|
+| [TACO bboxes](#taco-bboxes) | 7              	| 60                             	| WIP        	| Detection                 	| Waste in the wild                    	| WIP                                                                 	| ? | :heavy_check_mark: 	|
+| [UAVVaste](#uavvaste) | 1              	| -                              	| 772        	| Segmentation              	| Drone dataset                        	| [github](https://github.com/PUTvision/UAVVaste)                                	| Apache license | :heavy_check_mark: 	|
+| [Trashnet](#trashnet) | 6              	| -                              	| 2 527      	| Classification            	| Clear background                     	| [github](https://github.com/garythung/trashnet)                               	| MIT license | :heavy_check_mark: 	|
+| [WaDaBa](#plastic-waste-database-of-images--wadaba) | 8              	| color,size, shape, or material 	| 4 000      	| Classification            	| Plastic dataset, clear background    	| [website](http://wadaba.pcz.pl/)                                               	| ? | :heavy_check_mark: 	|
+| [GLASSENSE-VISION](#glassense-vision) | 7              	| 136                            	| 2 000      	| Classification            	| Home-supplies, clear background      	| [archived website](http://web.archive.org/web/20210925062127/http://www.slipguru.unige.it/Data/glassense_vision/)                 	| ? | :heavy_check_mark: 	|
+| [Waste Classification data](#waste-classification-data) | 2              	| -                              	| ~25 000    	| Classification            	| Scraped from google search           	| [kaggle](https://www.kaggle.com/techsash/waste-classification-data)           	| CC BY-SA 4.0 | :heavy_check_mark: 	|
+| [Waste Classification Data v2](#waste-classification-data-v2) | 3              	| -                              	| ~27 500    	| Classification            	| Scraped from google search           	| [kaggle](https://www.kaggle.com/sapal6/waste-classification-data-v2)          	| CC BY-SA 4.0 | :heavy_check_mark: 	|
+| Waste Images from Sushi Restaurant 	| 16             	| -                              	| 500        	| Classification            	| Clear background                     	| [kaggle](https://www.kaggle.com/arthurcen/waste-images-from-sushi-restaurant) 	| Database: Open Database, Contents: © Original Authors |  	|
+| [Open litter map](#open-litter-map) | 11             	| 187                            	| > 100k     	| Multilabel classification 	| Waste in the wild                    	| [website](https://openlittermap.com/)                                          	| ? | :heavy_check_mark: 	|
+| [Litter](#litter) | 24             	| size, shape, or material       	| ~14 000    	| Detection                 	| Waste in the wild, paid license      	| no longer online                       	| ? | :heavy_check_mark: 	|
+| [Drinking Waste Classification](#drinking-waste-classification) | 4              	| -                              	| 9640       	| Detection                 	| Clear background, (cans and bottles) 	| [kaggle](https://www.kaggle.com/arkadiyhacks/drinking-waste-classification)   	| CC0: Public Domain | :heavy_check_mark: 	|
+| [waste_pictures](#waste_pictures) | 34             	| -                              	| ~24 000    	| Classification            	| Scraped from google search           	| [kaggle](https://www.kaggle.com/wangziang/waste-pictures)                     	| Unknown | :heavy_check_mark: 	|
+| [spotgarbage](#spotgarbage---gini-dataset) | 3              	| -                              	| ~2 400     	| Classification            	| Scraped from Bing search           	| [kaggle](https://www.kaggle.com/apremeyan/garbage)<br> [github](https://github.com/spotgarbage/spotgarbage-GINI)                            	| CC0: Public Domain | :heavy_check_mark: 	|
+| [DeepSeaWaste](#deepseawaste) | 5              	| -                              	| 3 055      	| Classification            	| Underwater images                    	| [kaggle](https://www.kaggle.com/henryhaefliger/deepseawaste)                  	| Unknown | :heavy_check_mark: 	|
+| [MJU-Waste v1.0](#mju-waste-v10) | 1              	| -                              	| 2475      	| Segmentation            	  | Plain background, indoor RGBD images                    	| [github](https://github.com/realwecan/mju-waste/)                  	| MIT license | :heavy_check_mark: 	|
+| [Domestic Trash Dataset](#domestic-trash-dataset) | 10              | -                              	| > 9000      | Classification/Detection    | Waste in the wild, paid license, 250 images for free                    	|  [github](https://github.com/datacluster-labs/Domestic-Trash-Dataset)                 	| ? | :heavy_check_mark: 	|
+| [Cigarette butt dataset](#cigarette-butt-dataset) | 1              	| -                              	| 2200      	| Detection            	      | Waste in the wild, synthetic images                    	|  [website](https://www.immersivelimit.com/datasets/cigarette-butts)                 	| Non-Commercial, Educational License Agreement | :heavy_check_mark: 	|
+| [TrashBox](#trashbox-dataset) | 7 | 25 | 17785 | Classification/Detection | Scraped from web | [github](https://github.com/nikhilvenkatkumsetty/TrashBox) | ? | :heavy_check_mark: |
 | PortlandStateSingh | 5 | - | 11500 | Classification/Detection | Original photos | [website](https://web.cecs.pdx.edu/~singh/rcyc-web/index.html) | ? | |
 | TIDY | 9 | - | 304 | Classification | Original photos | [github](https://github.com/gale31/TIDY) | MIT license | |
-| **Garbage Dataset (V2)** | **10** | **-** | **19 762** | **Classification** | **Household waste. Used in paper "Managing Household Waste Through Transfer Learning"** | **[kaggle](https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2)** | **?** | **:heavy_check_mark:** |
-| **RealWaste** | **9** | **-** | **4 752** | **Classification** | **Collected in authentic landfill environment. 524x524 resolution.** | **[UCI ML Repo](https://archive.ics.uci.edu/dataset/908/realwaste)** | **?** | **:heavy_check_mark:** |
-| **BePLi Dataset v1** | **1** | **-** | **3 709** | **Instance Segmentation / Object Detection** | **Beach plastic litter (various types) in coastal environments (Japan). MS COCO format.** | **[ResearchGate Paper](https://www.researchgate.net/publication/370218660_BePLi_Dataset_v1_Beach_Plastic_Litter_Dataset_version_1_for_instance_segmentation_of_beach_plastic_litter)** | **CC BY 4.0** | **:heavy_check_mark:** |
-| ZeroWaste | 4 | - | 4 503 (+ 6 212 unlabeled, + 1 410 weakly) | Instance-Segmentation / Detection | Recycling plant conveyor belts | [github](https://github.com/Trash-AI/ZeroWaste) | CC BY-NC 4.0 (dataset) | :heavy_check_mark: |
-| BeachLitter dataset v2022 | 8 | - | 3 500 | Segmentation | Beach litter (8 classes) | [doi](https://doi.org/10.17882/85472) | CC BY 4.0 | :heavy_check_mark: |
-| **BePLi Dataset v2** | **13** | **-** | **3 722** | **Instance Segmentation / Object Detection** | **Beach plastic litter (Japan). Update of BePLi.** | **[doi](https://doi.org/10.17882/96963)** | **CC BY-NC-SA 4.0** | **:heavy_check_mark:** |
-| MARIDA | 15 | confidence level (3) | 1 381 patches | Weakly-supervised semantic segmentation | Sentinel-2 remote sensing (marine debris) | [zenodo](https://zenodo.org/records/5151941) | CC BY 4.0 | :heavy_check_mark: |
-| MADOS | 15 | confidence level (3) | 2 803 patch crops | Semantic segmentation (sparse) | Sentinel-2 remote sensing (marine debris + oil spill) | [zenodo](https://zenodo.org/records/10664073) | Open (see Zenodo) | :heavy_check_mark: |
-| DroneWaste | 20 | - | 4 993 | Detection | Drone orthomosaics (illegal dumpsites) | [zenodo](https://zenodo.org/records/17288038) | CC BY 4.0 | :heavy_check_mark: |
-| SpectralWaste | 6 | - | 852 | Instance Segmentation / Classification | Waste sorting; RGB + SWIR hyperspectral | [zenodo](https://zenodo.org/records/11499414) | CC BY 4.0 | :heavy_check_mark: |
-| SWIR hyperspectral waste cubes | - | - | 7 cubes | - | SWIR hyperspectral (980–2500 nm) waste objects | [mendeley](https://data.mendeley.com/datasets/dpnrxcc8fv/2) | CC BY 4.0 | :heavy_check_mark: |
-| IWHR_AI_Lable_Floater_V1 | ? | - | 3 000 | Detection | Floating debris in inland waters (shore-based) | [paper](https://doi.org/10.1038/s41597-025-04594-9)<br>[figshare](https://doi.org/10.6084/m9.figshare.27376851.v1) | ? | :heavy_check_mark: |
-| FloW (FloW-Img / FloW-RI) | ? | - | 2 000 images (+ 4 000 frames w/ radar) | Detection + radar | Floating waste in inland waters (application needed) | [github](https://github.com/ORCA-Uboat/FloW-Dataset) | Application required | :heavy_check_mark: |
+| [Garbage Dataset (V2)](#garbage-dataset-v2) | 10 | - | 19 762 | Classification | Household waste. Used in paper "Managing Household Waste Through Transfer Learning" | [kaggle](https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2) | MIT license | :heavy_check_mark: |
+| [RealWaste](#realwaste) | 9 | - | 4 752 | Classification | Collected in authentic landfill environment. 524x524 resolution. | [UCI ML Repo](https://archive.ics.uci.edu/dataset/908/realwaste) | ? | :heavy_check_mark: |
+| [BePLi Dataset v1](#bepli-dataset-v1) | 1 | - | 3 709 | Instance Segmentation / Object Detection | Beach plastic litter (various types) in coastal environments (Japan). MS COCO format. | [ResearchGate Paper](https://www.researchgate.net/publication/370218660_BePLi_Dataset_v1_Beach_Plastic_Litter_Dataset_version_1_for_instance_segmentation_of_beach_plastic_litter) | CC BY 4.0 | :heavy_check_mark: |
+| [ZeroWaste](#zerowaste) | 4 | - | 4 503 (+ 6 212 unlabeled, + 1 410 weakly) | Instance-Segmentation / Detection | Recycling plant conveyor belts | [github](https://github.com/dbash/zerowaste) | CC BY-NC 4.0 (dataset) | :heavy_check_mark: |
+| [BeachLitter dataset v2022](#beachlitter-dataset-v2022) | 8 | - | 3 500 | Segmentation | Beach litter (8 classes) | [doi](https://doi.org/10.17882/85472) | CC BY 4.0 | :heavy_check_mark: |
+| [BePLi Dataset v2](#bepli-dataset-v2) | 13 | - | 3 722 | Instance Segmentation / Object Detection | Beach plastic litter (Japan). Update of BePLi. | [doi](https://doi.org/10.17882/96963) | CC BY-NC-SA 4.0 | :heavy_check_mark: |
+| [MARIDA](#marida-marine-debris-archive) | 15 | confidence level (3) | 1 381 patches | Weakly-supervised semantic segmentation | Sentinel-2 remote sensing (marine debris) | [zenodo](https://zenodo.org/records/5151941) | CC BY 4.0 | :heavy_check_mark: |
+| [MADOS](#mados-marine-debris-and-oil-spill) | 15 | confidence level (3) | 2 803 patch crops | Semantic segmentation (sparse) | Sentinel-2 remote sensing (marine debris + oil spill) | [zenodo](https://zenodo.org/records/10664073) | Open (see Zenodo) | :heavy_check_mark: |
+| [DroneWaste](#dronewaste) | 20 | - | 4 993 | Detection | Drone orthomosaics (illegal dumpsites) | [zenodo](https://zenodo.org/records/17288038) | CC BY 4.0 | :heavy_check_mark: |
+| [SpectralWaste](#spectralwaste) | 6 | - | 852 | Instance Segmentation / Classification | Waste sorting; RGB + SWIR hyperspectral | [zenodo](https://zenodo.org/records/10880544) | CC BY 4.0 | :heavy_check_mark: |
+| [SWIR hyperspectral waste cubes](#swir-hyperspectral-waste-cubes) | - | - | 7 cubes | - | SWIR hyperspectral (980–2500 nm) waste objects | [mendeley](https://data.mendeley.com/datasets/dpnrxcc8fv/2) | CC BY 4.0 | :heavy_check_mark: |
+| [IWHR_AI_Lable_Floater_V1](#iwhr_ai_lable_floater_v1) | ? | - | 3 000 | Detection | Floating debris in inland waters (shore-based) | [paper](https://doi.org/10.1038/s41597-025-04594-9)<br>[figshare](https://doi.org/10.6084/m9.figshare.27376851.v1) | ? | :heavy_check_mark: |
+| [FloW (FloW-Img / FloW-RI)](#flow-flow-img--flow-ri) | ? | - | 2 000 images (+ 4 000 frames w/ radar) | Detection + radar | Floating waste in inland waters (application needed) | [github](https://github.com/ORCAUBOAT/FloW-Dataset) | Application required | :heavy_check_mark: |
+| [Seaclear Marine Debris](#seaclear-marine-debris) | 40 | - | 8 610 | Detection / Instance segmentation (COCO) | Underwater, shallow water (ROV), Croatia and France; also animals, plants and robot parts | [4TU](https://doi.org/10.4121/4f1dff25-e157-4399-a5d4-478055461689)<br>[paper](https://doi.org/10.1038/s41597-024-03759-2) | ? | :heavy_check_mark: |
+| [DeepPlastic](#deepplastic) | ? | - | 3 174 | Detection | Underwater plastic in the upper ocean layer (California, JAMSTEC J-EDI) | [zenodo](https://zenodo.org/record/5562940)<br>[paper](https://arxiv.org/abs/2105.01882) | CC BY 4.0 | :heavy_check_mark: |
+| [Marine Debris FLS](#marine-debris-fls) | 11 (+ background) | - | 1 868 (water tank segmentation) | Segmentation / Classification / Matching | Forward-looking sonar (water tank, turntable) | [github](https://github.com/mvaldenegro/marine-debris-fls-datasets)<br>[paper](https://arxiv.org/abs/2108.06800) | ? | :heavy_check_mark: |
+| [RiSID](#risid-river-surface-image-dataset) | 7 (also 5- and 2-class versions) | - | 7 356 | Instance segmentation (COCO) | Floating macroplastic, 7 rivers in Japan, high flow | [zenodo](https://zenodo.org/records/16927238)<br>[paper](https://doi.org/10.3389/feart.2024.1427132) | CC BY 4.0 | :heavy_check_mark: |
+| [FloatWaste](#floatwaste) | 25 | - | 7 906 | Detection (COCO) | Floating river waste, Australia and Indonesia, trail cameras | [huggingface](https://huggingface.co/datasets/OliviaWuYJ/sc-floatwaste)<br>[zenodo](https://doi.org/10.5281/zenodo.21934286) | CC BY 4.0 | :heavy_check_mark: |
+| [TUD-GV](#tud-gv) | 4 (litter-count levels) | - | 9 473 | Classification | Floating litter in a drainage canal (TU Delft) | [zenodo](https://zenodo.org/records/7636124)<br>[paper](https://doi.org/10.3389/frwa.2023.1298465) | CC BY 4.0 | :heavy_check_mark: |
+| [AquaPlasticWaste 2026](#aquaplasticwaste-2026) | 7 (or binary) | - | 5 000 | Instance segmentation (polygons, COCO/YOLO) | Drone images of floating plastic, Dal Lake (Kashmir) | [mendeley](https://data.mendeley.com/datasets/zshjxgfmc3/1) | CC BY 4.0 | :heavy_check_mark: |
+| [AerialWaste](#aerialwaste) | multi-label subset | - | > 11 700 (v3) | Classification / Multi-label / Weak segmentation | Aerial and satellite images of illegal landfills (Lombardy, Italy) | [zenodo](https://zenodo.org/records/12607190)<br>[paper](https://doi.org/10.1038/s41597-023-01976-9) | CC BY-NC-ND 4.0 (v3) | :heavy_check_mark: |
+| [PlastOPol](#plastopol) | 1 | - | 2 418 | Detection | Litter in the wild (water, snow, sand, streets) | [zenodo](https://zenodo.org/records/5829156)<br>[paper](https://doi.org/10.3390/s22020548) | CC BY 4.0 | :heavy_check_mark: |
+| [pLitterStreet](#plitterstreet) | ? | - | > 13 000 | Detection (COCO) | Street and roadside litter, Thailand, Vietnam and Sri Lanka | [zenodo](https://doi.org/10.5281/zenodo.8288500)<br>[github](https://github.com/gicait/pLitter) | CC BY 4.0 | :heavy_check_mark: |
+| [RoLID-11K](#rolid-11k) | 1 | - | 11 565 | Detection | Roadside litter from dashcam video (UK) | [github](https://github.com/xq141839/RoLID-11K)<br>[paper](https://arxiv.org/abs/2601.00398) | Apache 2.0 (repository) | :heavy_check_mark: |
+| [SWiM3](#swim3) | 3 | 10 | 6 429 | Detection | Households, parks and public spaces (smartphone photos) | [github](https://github.com/Burhan-Ahmed/SWiM3-Dataset)<br>[paper](https://doi.org/10.1109/ICoDT269104.2025.11360732) | Research and educational use | :heavy_check_mark: |
+| [WaRP](#warp-waste-recycling-plant) | 28 | - | 2 974 (detection) + 10 406 crops (classification) + 112 (segmentation) | Detection / Classification / Weak segmentation | Recycling plant conveyor belt | [github](https://github.com/AIRI-Institute/WaRP)<br>[kaggle](https://www.kaggle.com/datasets/parohod/warp-waste-recycling-plant-dataset) | ? | :heavy_check_mark: |
+| [CODD](#codd-construction-and-demolition-waste-object-detection-dataset) | 10 | - | 3 129 | Detection / Instance segmentation (VOC) | Construction and demolition waste, recycling facility (Cyprus) | [mendeley](https://data.mendeley.com/datasets/wds85kt64j/3)<br>[paper](https://doi.org/10.1016/j.wasman.2024.02.017) | CC BY 4.0 | :heavy_check_mark: |
+| [Medical-Waste-4.0](#medical-waste-40) | 13 | - | ? | Classification | Medical waste, RGB and stereo pair (OAK-D camera) | [zenodo](https://zenodo.org/record/7709001)<br>[paper](https://arxiv.org/abs/2303.04720) | Other (open) | :heavy_check_mark: |
+| [ETID-v2 (E-Tadweer)](#etid-v2-e-tadweer-image-dataset) | 23 | - | 14 055 | Classification | E-waste (devices, components, batteries) | [mendeley](https://data.mendeley.com/datasets/bndsgcspbx) | CC BY 4.0 | :heavy_check_mark: |
 
 # Description
 
@@ -64,14 +103,14 @@ An Instance-Segmentation Labeled Dataset of Trash Observations
 7212 images under 3 main categories: bio, trash, unknown.
 Categories:
 * bio = turtle, squid, lobster, unknown, jellyfish, stingray, shrimp, crawfish, octopus, shark, shell, crab, starfish, eel
-* trash = clothing, pipe, bottle, bag, snack_wrapper, glove, tire, can, cup,container, branch, wreakage, tarp, box, hose, rope, hay, net, paper, bucket, wire
+* trash = clothing, pipe, bottle, bag, snack_wrapper, glove, tire, can, cup,container, branch, wreckage, tarp, box, hose, rope, hay, net, paper, bucket, wire
 * unknown
 **Download**: Directly from website  https://conservancy.umn.edu/handle/11299/214865
 
-## Trash-ICRA19:
-A Bounding Box Labeled Dataset of Underwater Tras
+## Trash-ICRA19
+A Bounding Box Labeled Dataset of Underwater Trash
 5,700 underwater images extracted from video
-https://jungseokhong.github.io/
+http://jungseokhong.com/
 
 **Download**: Directly from website https://conservancy.umn.edu/handle/11299/214366
 
@@ -113,9 +152,9 @@ Read more about it in the paper [Deep learning-based waste detection in natural 
 **Drone rubbish detection intelligent technology**
 The UAVVaste dataset consists to date of 772 images and 3716 annotations. The main motivation for creation of the dataset was the lack of domain-specific data. The datasets that are widely used for object detection evaluation benchmarking. The dataset is made publicly available and is intended to be expanded.
 
-Avaiable annotations for Detection and Segmentation https://github.com/UAVVaste/UAVVaste
+Available annotations for Detection and Segmentation https://github.com/PUTvision/UAVVaste
 
-**Download**: Directly from annotations json on github https://github.com/UAVVaste/UAVVaste
+**Download**: Directly from annotations json on github https://github.com/PUTvision/UAVVaste
 
 ![](img/uavvaste_example.gif)
 
@@ -150,11 +189,11 @@ The object were put on the research position and next photographed with first an
 
 
 ## GLASSENSE-VISION
-Home-supplies classification. It is not strict litter dataset but it gathers over 2000 images with objects well-spareted from background. Covers 7 main categories of (Banknotes, Cereals, Medicines, Cans, Tomato sauces, Water bottle, Deodorant stick) and 136 subcategories.
+Home-supplies classification. It is not strict litter dataset but it gathers over 2000 images with objects well separated from the background. Covers 7 main categories of (Banknotes, Cereals, Medicines, Cans, Tomato sauces, Water bottle, Deodorant stick) and 136 subcategories.
 
 Glassense-Vision is a set of data we acquired and annotated to the purpose of providing a quantitative and repeatable assessment of the proposed method. The dataset includes 7 different use cases, meaning different object categories, where for each one of them we provide training (reference images used also to build dictionaries) and test images. All images in the dataset are manually annotated. The different use cases (object categories) can be grouped in three main geometrical types:
 
-**Download**: http://www.slipguru.unige.it/Data/glassense_vision/
+**Download**: the original website is no longer online. An archived copy: http://web.archive.org/web/20210925062127/http://www.slipguru.unige.it/Data/glassense_vision/
 
 ![](img/glassense_example.jpg)
 
@@ -180,25 +219,25 @@ https://openlittermap.com/
 
 **Download**: Only from json with scraper -  [detectwaste scraper](https://github.com/wimlds-trojmiasto/detect-waste)
 
-![](img/trashnet_example.jpg)
+![](img/openlittermap_example.jpg)
 
 ## Litter
 
 The Litter dataset contains 14k images with 20k annotations (bounding boxes) and 24 classes. Each class represents an object (cup), while subclasses determine its size, shape, or material (long paper cup/short paper cup).
 
-**Download**: After buying a license https://www.imageannotation.ai/litter-dataset
+**Download**: the dataset was sold under a paid license by imageannotation.ai. That website is no longer online.
 
 ![](img/litter_example.jpg)
 
 
 ## Drinking Waste Classification
-The dataset contains ~10k images grupped by 4 classes of drinking waste: Aluminium Cans, Glass bottles, PET (plastic) bottles and HDPE (plastic) Milk bottles. Pictures were taken with 12 MP phone camera as a part of final year Individual Project at University College London.
+The dataset contains ~10k images grouped by 4 classes of drinking waste: Aluminium Cans, Glass bottles, PET (plastic) bottles and HDPE (plastic) Milk bottles. Pictures were taken with 12 MP phone camera as a part of final year Individual Project at University College London.
 The dataset used parts of manually collected images from TrashNet.
 
 **Download**: Directly from kaggle https://www.kaggle.com/arkadiyhacks/drinking-waste-classification
 
 ## waste_pictures
-The dataset contains ~24k images grupped by 34 classes of waste for classification purposes. The images were divided into train and test subsets.
+The dataset contains ~24k images grouped by 34 classes of waste for classification purposes. The images were divided into train and test subsets.
 
 **Download**: Directly from kaggle https://www.kaggle.com/wangziang/waste-pictures
 
@@ -223,7 +262,7 @@ This dataset consists of ~3k images divided by 4 categories, and taken under wat
 ## MJU-Waste v1.0
 This dataset was created by capture collected waste items from a university campus in a lab background (people hold waste items in their hands). All images in the dataset are captured using a Microsoft Kinect RGBD camera. All annotations are provided in PASCAL VOC and COCO format.
 
-MJU-Waste v1, contains 2475 co-registered RGB and depth image pairs. Images are randomly splited into a training set, a validation set and a test set of 1485, 248 and 742 images, respectively. Authors used single class label for all waste objects.
+MJU-Waste v1, contains 2475 co-registered RGB and depth image pairs. Images are randomly split into a training set, a validation set and a test set of 1485, 248 and 742 images, respectively. Authors used single class label for all waste objects.
 
 **Download**: From Google Drive link placed on https://github.com/realwecan/mju-waste/
 
@@ -247,9 +286,9 @@ MJU-Waste v1, contains 2475 co-registered RGB and depth image pairs. Images are 
 - Classification and detection annotations available
 - COCO, PASCAL VOC and YOLO formats
 - Approx. 9000+ unique images and growing
-- Only 250 images for free avaiable on [kaggle](https://www.kaggle.com/dataclusterlabs/domestic-trash-garbage-dataset)
+- Only 250 images for free available on [kaggle](https://www.kaggle.com/dataclusterlabs/domestic-trash-garbage-dataset)
 
-**Download** Images available for download after buying a license. Contact them from their support details at: [https://github.com/datacluster-labs/Datacluster-Datasets](https://github.com/datacluster-labs/Datacluster-Datasets)
+**Download** Images available for download after buying a license. Contact them from their support details at: [https://github.com/datacluster-labs/Domestic-Trash-Dataset](https://github.com/datacluster-labs/Domestic-Trash-Dataset)
 
 ![](https://github.com/datacluster-labs/Domestic-Trash-Dataset/raw/main/sample_datasets/trash_dataset/paper_cup_4.jpeg) ![](https://github.com/datacluster-labs/Domestic-Trash-Dataset/raw/main/sample_datasets/trash_dataset/battery_2.jpeg) ![](https://github.com/datacluster-labs/Domestic-Trash-Dataset/raw/main/sample_datasets/trash_dataset/paper_cup_3.jpeg)
 
@@ -274,16 +313,16 @@ Dataset of trash objects for waste classification and detection (no detection an
 
 Waste categories are as follows:
 1. Medical waste : Syringes, Surgical Gloves, Surgical Masks, Medicines( Drugs and Pills)   [Number of images: 2010]
-2. E-Waste : Electronic chips, Laptops and Smartphones, Applicances, Electric wires, cords and cables   [Number of images: 2883]
+2. E-Waste : Electronic chips, Laptops and Smartphones, Appliances, Electric wires, cords and cables   [Number of images: 2883]
 3. Plastic : Bags, Bottles, Containers, Cups, Cigarette Butts (which have a plastic filter)  [Number of images: 2669]
 4. Paper : Tetra Pak, News Papers, Paper Cups, Paper Tissues  [Number of images: 2695]
-5. Metal : Beverage Cans, Cnostruction Scrap, Spray Cans, Food Grade Cans, Other metal objects. [Number of images: 2586]
+5. Metal : Beverage Cans, Construction Scrap, Spray Cans, Food Grade Cans, Other metal objects. [Number of images: 2586]
 6. Glass [Number of images: 2528]
 7. Cardboard [Number of images: 2414]
 
 **Download** Images are available for download at github repository: [nikhilvenkatkumsetty/TrashBox](https://github.com/nikhilvenkatkumsetty/TrashBox)
 
-<img src="https://github.com/nikhilvenkatkumsetty/TrashBox/blob/main/Trash_dataset/e-waste/e-waste%201.jpg" width="300"> <img src="https://github.com/nikhilvenkatkumsetty/TrashBox/blob/main/Trash_dataset/plastic/plastic%201001.jpg" width="300"> <img src="https://github.com/nikhilvenkatkumsetty/TrashBox/blob/main/Trash_dataset/medical/medical%201005.jpg" width="300">
+<img src="https://raw.githubusercontent.com/nikhilvenkatkumsetty/TrashBox/main/TrashBox_train_set/e-waste/e-waste%201.jpg" width="300"> <img src="https://raw.githubusercontent.com/nikhilvenkatkumsetty/TrashBox/main/TrashBox_train_set/plastic/plastic%201001.jpg" width="300"> <img src="https://raw.githubusercontent.com/nikhilvenkatkumsetty/TrashBox/main/TrashBox_train_set/medical/medical%201005.jpg" width="300">
 
 ## Garbage Dataset (V2)
 
@@ -316,7 +355,7 @@ It includes:
 - **ZeroWaste-s**: 6,212 unlabeled images (for semi-supervised learning)
 - **ZeroWaste-w**: 1,410 weakly labeled “before/after cleaning” images
 
-**Download**: GitHub repository (dataset section) https://github.com/Trash-AI/ZeroWaste  
+**Download**: GitHub repository (dataset section) https://github.com/dbash/zerowaste  
 **License**: CC BY-NC 4.0 (dataset); code is released separately (see repo)
 
 ## BeachLitter dataset v2022
@@ -376,7 +415,7 @@ SpectralWaste is a multimodal dataset for waste sorting automation. It provides:
 
 The dataset supports tasks such as waste classification and (instance) segmentation/detection.
 
-**Download**: Zenodo https://zenodo.org/records/11499414  
+**Download**: Zenodo https://zenodo.org/records/10880544  
 **License**: CC BY 4.0
 
 ## SWIR hyperspectral waste cubes
@@ -405,4 +444,84 @@ FloW is a dataset for floating waste detection in inland waters:
 - **FloW-Img**: vision-based dataset (reported as 2,000 images / 5,271 annotated objects in related literature)
 - **FloW-RI**: multimodal dataset with synchronized images and millimeter-wave radar (RDM) data (reported as 4,000 frames)
 
-**Download**: Requires application via ORCA-Uboat dataset portal (see repo) https://github.com/ORCA-Uboat/FloW-Dataset
+**Download**: Requires application via ORCA-Uboat dataset portal (see repo) https://github.com/ORCAUBOAT/FloW-Dataset
+
+## Seaclear Marine Debris
+Underwater images taken by remotely operated vehicles (ROVs) in shallow water in Croatia and Marseille, France, during the Seaclear project. The dataset has 8,610 images at 1920x1080 with COCO annotations for 40 categories. The categories cover litter and also animals, plants and robot parts.
+
+**Download**: https://doi.org/10.4121/4f1dff25-e157-4399-a5d4-478055461689 (paper: https://doi.org/10.1038/s41597-024-03759-2)
+
+## DeepPlastic
+Images of plastic in the upper ocean layer, taken at three sites in California, with extra images from the JAMSTEC J-EDI archive. The dataset has 3,174 images (1,900 train, 637 validation, 637 test) with bounding boxes.
+
+**Download**: https://zenodo.org/record/5562940 (paper: https://arxiv.org/abs/2105.01882)
+
+## Marine Debris FLS
+Forward-looking sonar images of household debris and other objects, recorded with an ARIS Explorer 3000 in a water tank and on a turntable. The water tank segmentation set has 1,868 images with 11 classes plus background. Further subsets support classification and patch matching.
+
+**Download**: https://github.com/mvaldenegro/marine-debris-fls-datasets (papers: https://arxiv.org/abs/2108.06800, https://arxiv.org/abs/2503.22880)
+
+## RiSID (River Surface Image Dataset)
+7,356 images of floating macroplastic, taken at 11 sites on 7 rivers in Japan during high flow. Each image has pixel-wise masks in COCO format. Labels come in three versions: 7 classes, 5 classes, or plastic vs non-plastic.
+
+**Download**: https://zenodo.org/records/16927238 (paper: https://doi.org/10.3389/feart.2024.1427132)
+
+## FloatWaste
+7,906 images of floating waste in rivers from three regions: Hobart, the Sydney area, and the Citarum basin in Indonesia. There are 27,583 bounding boxes in 25 litter classes, in COCO format.
+
+**Download**: https://huggingface.co/datasets/OliviaWuYJ/sc-floatwaste (Zenodo: https://doi.org/10.5281/zenodo.21934286)
+
+## TUD-GV
+9,473 images of floating litter, taken by cameras and phones over a drainage canal on the TU Delft campus. Each image is labeled with one of 4 classes by how many litter items it shows (0, 1–2, 3–5, 6–10).
+
+**Download**: https://zenodo.org/records/7636124 (paper: https://doi.org/10.3389/frwa.2023.1298465)
+
+## AquaPlasticWaste 2026
+5,000 drone images of Dal Lake in Kashmir, 4,692 of which contain plastic. There are 30,166 polygon instances in COCO and YOLO formats. Labels are binary or 7 classes: background, bottle, cap, foam, polythene, shoe, wrapper.
+
+**Download**: https://data.mendeley.com/datasets/zshjxgfmc3/1
+
+## AerialWaste
+Aerial, WorldView-3 and Google Earth images for finding illegal landfills in Lombardy, Italy, labeled by professional photo interpreters at ARPA Lombardia. Version 3 has more than 11,700 images with binary labels. A subset also has multi-label waste-type tags and segmentation masks.
+
+**Download**: https://zenodo.org/records/12607190 (paper: https://doi.org/10.1038/s41597-023-01976-9)
+
+## PlastOPol
+2,418 images from the Marine Debris Tracker app, showing litter on water, snow, sand, streets and other backgrounds. There are 5,300 bounding boxes in a single "litter" class.
+
+**Download**: https://zenodo.org/records/5829156 (paper: https://doi.org/10.3390/s22020548)
+
+## pLitterStreet
+More than 13,000 street-level images of plastic litter and roadside litter piles in Thailand, Vietnam and Sri Lanka. Bounding boxes are in COCO format.
+
+**Download**: https://doi.org/10.5281/zenodo.8288500 (repository: https://github.com/gicait/pLitter, paper: https://arxiv.org/abs/2401.14719)
+
+## RoLID-11K
+11,565 frames taken from 4K dashcam video in Lincolnshire, UK, for detecting small roadside litter. Each frame has bounding boxes for one class, "litter".
+
+**Download**: https://github.com/xq141839/RoLID-11K (paper: https://arxiv.org/abs/2601.00398)
+
+## SWiM3
+6,429 smartphone photos taken in households, parks and public spaces. Bounding boxes are in YOLOv8 and Faster R-CNN formats. There are 3 main classes with 10 subclasses: plastic (bottle, bottlecap, straw, cup), paper (carton, crumpled paper, wood) and metal (can, metal cap, spray can).
+
+**Download**: https://github.com/Burhan-Ahmed/SWiM3-Dataset (paper: https://doi.org/10.1109/ICoDT269104.2025.11360732)
+
+## WaRP (Waste Recycling Plant)
+Images of a conveyor belt in a recycling plant, labeled with 28 classes: 17 plastic bottle types, glass bottles, cardboard, detergents, cans and others. WaRP-D has 2,452 train and 522 validation images with bounding boxes, WaRP-C has 8,823 train and 1,583 test crops, and WaRP-S has 112 images with masks.
+
+**Download**: https://github.com/AIRI-Institute/WaRP (paper: https://doi.org/10.1016/j.engappai.2023.107542)
+
+## CODD (Construction and Demolition Waste Object Detection Dataset)
+3,129 images taken at a construction and demolition waste recycling facility in Cyprus, with 16,545 annotated objects. Annotations are bounding boxes and polygons in PASCAL VOC format, in 10 classes: bricks, concrete, tiles, wood, pipes, plastics, general waste, foam insulation, stones and plaster boards.
+
+**Download**: https://data.mendeley.com/datasets/wds85kt64j/3 (paper: https://doi.org/10.1016/j.wasman.2024.02.017)
+
+## Medical-Waste-4.0
+Medical waste photographed with an OAK-D camera for primary sorting. Each sample has one RGB image and a grayscale stereo pair. There are 13 classes, including gauze, several glove types, caps, glasses, shoe covers, test tubes and urine bags.
+
+**Download**: https://zenodo.org/record/7709001 (paper: https://arxiv.org/abs/2303.04720)
+
+## ETID-v2 (E-Tadweer Image Dataset)
+14,055 RGB images of e-waste in 23 classes, one class per image. The classes cover electronic components, phones, laptops, keyboards, chargers, batteries, light bulbs and photovoltaic panels.
+
+**Download**: https://data.mendeley.com/datasets/bndsgcspbx
